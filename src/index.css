@@ -1,0 +1,10 @@
+.navbar-brand img{
+    border-radius: 50%;
+}
+.container-fluid a{
+    margin-right: 5px;
+}
+.container-1{
+    position: relative;
+    top: 2rem;
+}
