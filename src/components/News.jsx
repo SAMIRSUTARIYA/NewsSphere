@@ -143,17 +143,9 @@ export default class News extends Component {
             loading: false
         }
     }
-    // async componentDidMount() {
-    //     console.log(cdm);
-    //     let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8731201cb44e45d4bb53b390740ddea3" 
-    //     let data = await fetch(url);
-    //     let parsedata = await data.json();
-    //     console.log(parsedata);
-    //     // this.setState({articles : parsedata.articles});
-    //  }
     async componentDidMount() {
         console.log("CDM called");
-        let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8731201cb44e45d4bb53b390740ddea3"; // Replace with your API
+        let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API}"; // Replace with your API
         
         try {
             let response = await fetch(url);
