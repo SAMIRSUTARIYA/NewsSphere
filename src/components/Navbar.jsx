@@ -6,7 +6,7 @@ export default class Navbar extends Component {
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light p-0 border-bottom">
           <div className="container-fluid ps-md-5 pe-md-5">
-            
+
             <a className="navbar-brand" href="/">
               <img src="/src/assets/NewsSphere.png" alt="" width="55" height="55" className="d-inline-block align-text-top rounded-circle" />
             </a>
@@ -19,13 +19,10 @@ export default class Navbar extends Component {
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
-                {/* <li className="nav-item">
-                  <a className="nav-link" href="/">Link</a>
-                </li> */}
               </ul>
               <form className="d-flex">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-dark" type="submit">Search</button>
+                <button className="btn btn-outline-primary" type="submit">Search</button>
               </form>
             </div>
           </div>

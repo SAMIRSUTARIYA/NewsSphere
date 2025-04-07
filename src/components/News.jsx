@@ -3,42 +3,196 @@ import News_item from './News_item'
 import Button from './Button'
 
 export default class News extends Component {
+    articles = [
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Three ways the Spring Statement could affect you and your money",
+            "description": "While the Spring Statement focusses on the wider UK economy, it could have implications for your money.",
+            "url": "https://www.bbc.co.uk/news/articles/cvged1en8jro",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c38e/live/c75ce990-0989-11f0-9a0d-3be11e1d5750.jpg",
+            "publishedAt": "2025-03-27T04:07:22.7421309Z",
+            "content": "The Spring Statement doesn't come in isolation. Next week, a series of household bills will rise.\r\nFrom 1 April, you will pay more for water, energy and your council tax.\r\nHowever, if you're over 21 … [+1265 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Journalist at centre of Trump's Signal chat scandal speaks to BBC",
+            "description": "Jeffrey Goldberg, The Atlantic's editor in chief, was mistakenly added to a chat of senior Trump officials. Now he's a political target.",
+            "url": "https://www.bbc.co.uk/news/articles/c8rk7vyg83xo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7172/live/47b76040-0aaf-11f0-97d3-37df2b293ed1.jpg",
+            "publishedAt": "2025-03-27T03:52:22.1956004Z",
+            "content": "Still, one thing is clear: you must already have someone's contact information to reach them on Signal, and so Waltz had Goldberg's phone number. The top security adviser has said he has asked Elon M… [+4415 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Kristi Noem to visit Salvadorean jail holding deported Venezuelans",
+            "description": "The visit by the US Homeland Security secretary is seen as a show of support for the Salvadorean leader.",
+            "url": "https://www.bbc.co.uk/news/articles/cj4nrdnp018o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/861b/live/1a234c00-0a8e-11f0-8927-1bf75dcbbd79.jpg",
+            "publishedAt": "2025-03-27T02:37:17.1954325Z",
+            "content": "Meanwhile, lawyers in El Salvador, apparently acting in coordination with the Venezuelan government, have lodged a petition with the Salvadorean Supreme Court to try to secure the immediate release o… [+607 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "'Numb' and 'humiliated': Why China's football dream lies in tatters",
+            "description": "China has failed to qualify for the last five World Cups - and once again, their chances look unlikely.",
+            "url": "https://www.bbc.co.uk/news/articles/ce8vp2e7p64o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c7dd/live/b96fcca0-03d3-11f0-9b36-09a73999182b.jpg",
+            "publishedAt": "2025-03-27T01:37:23.4752345Z",
+            "content": "But that is not the only crisis engulfing Chinese football. Its rapid rise created another problem: corruption.\r\n\"I should have followed the right path. I was just doing what was customary at the tim… [+1252 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Monmouthshire and Brecon Canal could run dry in days, operators warn",
+            "description": "The operators of a 225-year-old canal warn of an \"urgent\" water shortage without imminent rainfall.",
+            "url": "https://www.bbc.co.uk/news/articles/cx208nj454ro",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/b68c/live/4cca1e90-0a3e-11f0-80d5-ff7a1f4f7e48.jpg",
+            "publishedAt": "2025-03-27T01:22:23.7421073Z",
+            "content": "Gavin Bown from Natural Resources Wales said regulating water abstraction was \"a complex, evidence-based process that carefully balances environmental needs with those of local communities\".\r\n\"Our pr… [+1455 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Ask for Angela: Daughter wants more to be done to protect women",
+            "description": "Angela Crompton's daughter has been speaking to the BBC about her life and the campaign in her name.",
+            "url": "https://www.bbc.co.uk/news/articles/cd6v1e224x0o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/dcbb/live/5a7f6a50-d3f6-11ef-94cb-5f844ceb9e30.jpg",
+            "publishedAt": "2025-03-27T01:22:21.2739707Z",
+            "content": "The Ask for Angela initiative was created by a violence against women and girls campaigner from Lincolnshire who knew of Angela's case through a mutual friend. The scheme has since spread across Brit… [+850 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Newspaper headlines: 'Balancing the books on backs of poor' and 'tax rise fears'",
+            "description": "Reaction to the chancellor announcing billions in cuts and gloomy economic forecasts dominate the front pages.",
+            "url": "https://www.bbc.co.uk/news/articles/cg5drv3el52o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/568a/live/a7dc56a0-0a97-11f0-88b7-5556e7b55c5e.png",
+            "publishedAt": "2025-03-27T00:22:24.8971807Z",
+            "content": "Image caption, The major cuts to the welfare state also feature in the Guardian's lead story, which notes that her plans could cost three million households around £1,720 a year. The paper also repor… [+325 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Hundreds lose life savings in whisky barrel scam",
+            "description": "Investors were duped into ploughing millions of pounds into casks that were overpriced or did not exist.",
+            "url": "https://www.bbc.co.uk/news/articles/cx2r7enl3d1o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/61c1/live/4c36e350-094e-11f0-97d3-37df2b293ed1.jpg",
+            "publishedAt": "2025-03-27T00:22:22.7570882Z",
+            "content": "Martin Armstrong runs Whisky Broker, a bonded warehouse in Creetown, near Dumfries, which stores 48,000 casks.\r\nHe says he's being contacted \"almost every day\" by investors looking for casks sold by … [+812 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Trump announces 25% tariffs on car imports to US",
+            "description": "The US President say the tariffs will come into effect on 2 April.",
+            "url": "https://www.bbc.co.uk/news/articles/cly341xr45vo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a4e2/live/f2c9e7f0-0a82-11f0-a145-69353f7d3b8c.jpg",
+            "publishedAt": "2025-03-26T22:07:18.6332228Z",
+            "content": "Mexico is the top foreign supplier of cars to the US, followed by South Korea, Japan, Canada and Germany.\r\nShares in General Motors slid roughly 3% on Wednesday, as the White House said it was planni… [+221 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Rachel Reeves squeezes benefits as 2025 growth forecast halved in Spring Statement",
+            "description": "The chancellor unveils defence spending boost and welfare changes in Spring Statement.",
+            "url": "https://www.bbc.co.uk/news/articles/cz7v4370d2xo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/47c3/live/3fd8eff0-0a3d-11f0-80d5-ff7a1f4f7e48.jpg",
+            "publishedAt": "2025-03-26T18:22:23.2570941Z",
+            "content": "The Spring Statement was meant to be a routine update on the public finances but Reeves has been forced to make more extensive changes after her plans were blown off course by lower growth and higher… [+2153 chars]"
+        }
+    ]
+    constructor() {
+        super();
+        // console.log("Constructor is Runnig:");
+        this.state = {
+            articles: this.articles,
+            loading: false
+        }
+    }
+    // async componentDidMount() {
+    //     console.log(cdm);
+    //     let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8731201cb44e45d4bb53b390740ddea3" 
+    //     let data = await fetch(url);
+    //     let parsedata = await data.json();
+    //     console.log(parsedata);
+    //     // this.setState({articles : parsedata.articles});
+    //  }
+    async componentDidMount() {
+        console.log("CDM called");
+        let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=8731201cb44e45d4bb53b390740ddea3"; // Replace with your API
+        
+        try {
+            let response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            let parsedData = await response.json();
+            console.log("Fetched Data:", parsedData);
+
+            this.setState({ articles: parsedData.articles });
+        } catch (error) {
+            console.error("Error fetching news:", error);
+        }
+    }
+
     render() {
         return (
             <div className="container my-3 mt-2">
                 <h4>Top Headlines</h4>
                 <div className='row'>
-                    <div className="col-lg-3 col-md-4">
-                        <News_item
-                            imgurl=""
-                            title="Three ways the Spring Statement could affect you and your money"
-                            desc="While the Spring Statement focusses on the wider UK economy, it could have implications for your money." />
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                        <News_item
-                            imgurl=""
-                            title="Three ways the Spring Statement could affect you and your money"
-                            desc="While the Spring Statement focusses on the wider UK economy, it could have implications for your money." />
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                        <News_item
-                            imgurl=""
-                            title="Three ways the Spring Statement could affect you and your money"
-                            desc="While the Spring Statement focusses on the wider UK economy, it could have implications for your money." />
-                    </div>
-                    <div className="col-lg-3 col-md-4">
-                        <News_item
-                            imgurl=""
-                            title="Three ways the Spring Statement could affect you and your money"
-                            desc="While the Spring Statement focusses on the wider UK economy, it could have implications for your money." />
-                    </div>
+                    {this.state.articles.map((element) => {
+                        return <div className="col-lg-3 col-md-4" key={element.url}>
+                            <News_item
+                                imgurl={element.urlToImage}
+                                title={element.title}
+                                desc={element.description}
+                                url={element.url}
+                            />
+                        </div>
+                    })}
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-6 d-flex justify-content-start">
                             <Button title="Previous" />
                         </div>
-                        <div className="col-md-6 text-end">
+                        <div className="col-6 d-flex justify-content-end">
                             <Button title="Next" />
                         </div>
                     </div>
