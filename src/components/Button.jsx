@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 class Button extends Component {
-    render() {
-      let {title} = this.props
+  render() {
+    let { title, onClick, disabled } = this.props
     return (
       <StyledWrapper>
-        <button className="button">
+        <button className="button" disabled={disabled} onClick={onClick}>
           <span className="button-content">{title}</span>
         </button>
       </StyledWrapper>
